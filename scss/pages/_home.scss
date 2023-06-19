@@ -1,0 +1,100 @@
+.game-board {
+  height: 40rem;
+  width: 40rem;
+  display: flex;
+  flex-direction: row;
+
+  .column-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: inherit;
+
+    .play-box {
+      border: solid white 1px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 6rem;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+#b0 {
+  border-top-left-radius: 50px;
+}
+
+#b6 {
+  border-top-right-radius: 50px;
+}
+
+#b2 {
+  border-bottom-left-radius: 50px;
+}
+
+#b8 {
+  border-bottom-right-radius: 50px;
+}
+
+.player {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+
+  input {
+    text-align: center;
+    width: 70%;
+    font-family: inherit;
+  }
+
+  .display-image1,
+  .display-image2 {
+    border: solid white 1px;
+    width: 50%;
+    height: 50%;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-size: contain;
+  }
+
+  h2 {
+    position: absolute;
+    top: 300px;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+}
+
+button {
+  position: absolute;
+  font-family: inherit;
+  bottom: 10px;
+  font-size: 1.5rem;
+  padding: 15px;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+  transition: transform 70ms ease-in-out;
+
+  &:active {
+    transform: translateY(5px);
+  }
+}
+
+.p1 {
+  left: 10px;
+}
+
+.p2 {
+  right: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}
